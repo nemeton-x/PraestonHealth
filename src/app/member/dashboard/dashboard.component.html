@@ -1,0 +1,221 @@
+<section>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="../../../assets/images/logo.png" class="Logo" />
+            </a>
+            <ul class="nav top-nav">
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <p>Logout</p>
+                    </a>
+                </li>
+            </ul>
+
+        </nav> -->
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12 head-section">
+                        <h2 class="">
+                            <a>James S Miller</a>
+                            <small>Aug 14, 2018</small>
+
+                        </h2>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+
+                    <div class="col-md-12 no-padd border-right">
+                        <div class="">
+                            <!--<div class="panel-heading panel-heading1">
+                            <span class="tab">
+                                <h4></h4>
+                            </span>
+                        </div>-->
+                            <!-- <div class="panel-body">
+           
+                          <div class="row Question">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="form-group">
+                                      <label class="label-Quest">1. What sort of drinker are you?</label>
+                                      <table>
+                                          <tr>
+                                              <td><a href="#"><div><img src="../../../assets/images/Alcoholic.png"><br />Alcoholic</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Heavydrinker.png"><br />Heavy drinker</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Social.png"><br />Social drinker</div></a></td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                              </div>
+
+                          </div>
+      
+                          <div class="row Question">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="form-group">
+                                      <label class="label-Quest">2. What do you drink, typically?</label>
+                                      <table>
+                                          <tr>
+                                              <td><a href="#"><div><img src="../../../assets/images/Beer.png"><br />Beers</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Wine.png"><br />Wines</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Spirits.png"><br />Spirits</div></a></td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                          <div class="row Question">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="form-group">
+                                      <label class="label-Quest">3. How often do you drink?</label>
+                                      <table>
+                                          <tr>
+                                              <td><a href="#"><div><img src="../../../assets/images/Beer.png"><br />< Once a week</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Wine.png"><br />Once a week</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Spirits.png"><br />2-3 times a week</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Spirits.png"><br />Every day</div></a></td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                              </div>
+
+                          </div>
+                    
+                          <div class="row Question">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="form-group">
+                                      <label class="label-Quest">4. Where do you usually drink?</label>
+                                      <table>
+                                          <tr>
+                                              <td><a href="#"><div><img src="../../../assets/images/Beer.png"><br />Office</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Wine.png"><br />Bar</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Spirits.png"><br />Outdoors</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Spirits.png"><br />Home</div></a></td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                          <div class="row Question">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="form-group">
+                                      <label class="label-Quest">5. Is there family history of alcoholism?</label>
+                                      <table>
+                                          <tr>
+                                              <td><a href="#"><div><img src="../../../assets/images/Beer.png"><br />Yes</div></a></td>
+                                              <td><a href="#"><div><img src="../../../assets/images/Wine.png"><br />No</div></a></td>
+                                            
+                                          </tr>
+                                      </table>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                          <div class="row">
+                            <div class="form-group col-md-12" style="margin-bottom:0px; margin-top:10px;">
+                                <button routerLink="/" class="btn btn-secondary aspen-bt buttonBlue">Cancel</button>
+                                <button type="submit" class="btn btn-default aspen-bt buttonBlue">Submit</button>
+                            </div>
+                          </div>
+                          
+                        </div> -->
+
+                            <div class="panel-body">
+                                <div *ngIf="!finalMsg">
+                                    <div class="row Question" *ngFor="let item of myQuestionaier;let q = index">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" *ngIf="!item.dep_option_id || (item.dep_option_id && (item.dep_option_id == quesAnsModel[item.dep_question_id]))">
+                                            <div class="form-group">
+                                                <label class="label-Quest">{{item.qus_statement}}</label>
+                                                <table>
+                                                    <tr>
+                                                        <td *ngFor="let ans of item.answer_data" id="{{item.question_id+'answerConatiner'}}">
+                                                            <div id="{{item.question_id+ans.answerkey}}" style="cursor: pointer;" [innerHTML]="ans.answer" (click)="selectAns(item.question_id, ans.answerkey)"></div>
+                                                            <!-- <div class="custom-control custom-radio">
+                                                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                                    <label class="custom-control-label" for="customRadio2">
+                                                                        <div [innerHTML]="ans.answer" (click)="selectAns(item.question_id, ans.answerkey)"></div>
+                                                                    </label>
+                                                                  </div> -->
+                                                        </td>
+                                                        <ng-container *ngIf="item['option_type']=='radio'">
+                                                            <td *ngFor="let ans of item.answers;let i = index" >
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsQues{{item.qus_id}}" id="inlineRadioAns{{ans.option_id}}" 
+                                                                    value="{{ans.option_id}}" [(ngModel)]="quesAnsModel[item.qus_id]">
+                                                                    <label class="form-check-label" for="inlineRadioAns{{ans.option_id}}">{{ans.option_text}}</label>
+                                                                </div>
+                                                            </td>
+                                                        </ng-container>
+                                                        <ng-container *ngIf="item['option_type']=='Text Box'">
+                                                            <td *ngFor="let ans of item.answers;let i = index" >
+                                                                <input class="form-control" type="text" placeholder="" [(ngModel)]="quesAnsModel[item.qus_id]">
+                                                            </td>
+                                                        </ng-container>
+                                                        <!-- <td><a href="#"><div><img src="../../../assets/images/Heavydrinker.png"><br />Heavy drinker</div></a></td> -->
+                                                        <!-- <td><a href="#"><div><img src="../../../assets/images/Social.png"><br />Social drinker</div></a></td> -->
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                            <div class="form-group col-md-12" style="margin-bottom:0px; margin-top:10px;">
+                                                <button routerLink="/" class="btn btn-secondary aspen-bt buttonBlue">Cancel</button>
+                                                <button type="submit" class="btn btn-default aspen-bt buttonBlue" (click)=getNextQuestionaire()>Submit</button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div *ngIf="finalMsg">
+                                    <div class="card" style="margin-top:50px">
+                                        <div class="card-header">
+                                            {{finalMsg}}
+                                        </div>
+                                        <!-- <div class="card-body">
+                                                  <h5 class="card-title">Special title treatment</h5>
+                                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                </div> -->
+                                        <!-- <div class="card-body" *ngFor="let item of surveyResult;let i = index">
+                                            {{i+1}}. {{item}}
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">&nbsp;</div>
+
+
+                <!-- /.row -->
+
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+    </div>
+</section>
